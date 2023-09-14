@@ -1,0 +1,118 @@
+/* Estilos para los números del DNI */
+.dni-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 24px;
+}
+
+.dni-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dni-number {
+    background-color: #3498db;
+    color: #fff;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el rectángulo de DNI */
+.dni-rect {
+    background-color: #3498db;
+    color: #fff;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 24px;
+    width: 200px;
+    text-align: center;
+}
+
+/* Estilos para el botón Confirmar y el botón Borrar */
+#btn-confirmar {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#btn-borrar {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilos para la lista de trámites */
+#tramites-list {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tramite-item {
+    background-color: #3498db;
+    color: #fff;
+    border: 2px solid #2980b9;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Estilos para la pantalla de confirmación */
+#pantalla-confirmacion {
+    text-align: center;
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+}
+
+#gracias-visita {
+    font-size: 36px;
+    color: #000;
+}
+
+#turno-generado {
+    font-size: 18px;
+    color: #000;
+}
+
+#numero-turno {
+    font-size: 48px;
+    color: #000;
+}
+
+#numero-box {
+    font-size: 48px;
+    color: #000;
+}
+
+#municipalidad {
+    font-size: 24px;
+    color: #000;
+}
+
+#fecha-hora {
+    font-size: 18px;
+    color: #000;
+}
