@@ -27,6 +27,11 @@ let fechaYHora = document.getElementById("fecha-hora")
         function actualizarDNI() {
             dniRect.textContent = dniInput;
         }
+        //Función para borrar completamente el DNI
+        function borrarDNI() {
+        dniInput = "";
+        actualizarDNI();
+        }
 
         // Función para mostrar la pantalla de selección de trámites
         function mostrarTramites() {
@@ -45,37 +50,46 @@ let fechaYHora = document.getElementById("fecha-hora")
 
         // Función para generar un turno y mostrar la pantalla de confirmación
         function generarTurno(tramite) {
-            let numeroTurno = turnoCounter++;
-
+            
+            
             // Mostrar la pantalla de confirmación
             pantallaTramite.style.display = "none";
             pantallaConfirmacion.style.display = "block";
-
+            
+            let numeroTurno = turnoCounter++;
+            
             // Mostrar la información del turno
             numeroDeTurno.textContent = "Turno: " + numeroTurno;
-
+            
             // Obtener la fecha y hora actual
             let fechaHora = new Date();
             let fechaHoraFormat = fechaHora.toLocaleString();
-
+            
             // Mostrar la fecha y hora en la pantalla de confirmación
             fechaYHora.textContent = "Fecha y hora: " + fechaHoraFormat;
+            
+            setTimeout(()=>{
+                
+                
+                pantallaDni.style.display="block"
+
+                if (dniInput.length <= 8) {
+                    borrarDNI()
+
+
+                    
+                }
+                // pantallaTramite.style.display = "block";
+            pantallaConfirmacion.style.display = "none";
+                
+            }
+            ,4000);
+            
         }
 
-        // Función para ampliar el tamaño de un elemento de trámite al pasar el ratón
-        function ampliarItem(elemento) {
-            elemento.style.fontSize = "24px";
-        }
+    
 
-        // Función para reducir el tamaño de un elemento de trámite al quitar el ratón
-        function reducirItem(elemento) {
-            elemento.style.fontSize = "20px";
-        }
-
-
-
-
-
+        
 
 
 
