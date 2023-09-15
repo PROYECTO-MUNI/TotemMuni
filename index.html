@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Municipio de Arroyito - Solicitud de Trámites</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Pantalla 1: Ingresar DNI -->
+    <div id="pantalla-dni">
+        <h1>Bienvenido/a</h1>
+        <p>Por favor, seleccione su DNI:</p>
+        <!-- Mostramos el rectángulo para el DNI -->
+        <div class="dni-rect" id="dni-rect"></div>
+        <div class="dni-container">
+            <!-- Organizamos los números del DNI como lo has especificado -->
+            <div class="dni-group">
+                <div class="dni-number" onclick="agregarNumeroDNI('1')">1</div>
+                <div class="dni-number" onclick="agregarNumeroDNI('2')">2</div>
+                <div class="dni-number" onclick="agregarNumeroDNI('3')">3</div>
+            </div>
+            <div class="dni-group">
+                <div class="dni-number" onclick="agregarNumeroDNI('4')">4</div>
+                <div class="dni-number" onclick="agregarNumeroDNI('5')">5</div>
+                <div class="dni-number" onclick="agregarNumeroDNI('6')">6</div>
+            </div>
+            <div class="dni-group">
+                <div class="dni-number" onclick="agregarNumeroDNI('7')">7</div>
+                <div class="dni-number" onclick="agregarNumeroDNI('8')">8</div>
+                <div class="dni-number" onclick="agregarNumeroDNI('9')">9</div>
+            </div>
+            <div class="dni-group">
+                <div class="dni-number" onclick="agregarNumeroDNI('0')">0</div>
+            </div>
+        </div>
+        <br>
+        <!-- Agregamos el botón Confirmar y el botón Borrar -->
+        <button id="btn-confirmar" onclick="mostrarTramites()">Confirmar</button>
+        <button id="btn-borrar" onclick="borrarUltimoNumero()">Borrar</button>
+    </div>
+
+    <!-- Pantalla 2: Seleccionar Trámite y Generar Turno (inicialmente oculta) -->
+    <div id="pantalla-tramites" style="display: none;">
+        <h1 style="text-align: center;">Seleccione un Trámite</h1>
+        <div id="tramites-list">
+            <div class="tramite-item" onclick="generarTurno('Caja')">Caja</div>
+            <div class="tramite-item" onclick="generarTurno('Catastro')">Catastro</div>
+            <div class="tramite-item" onclick="generarTurno('Cementerio')">Cementerio</div>
+            <div class="tramite-item" onclick="generarTurno('Comercio e Industria')">Comercio e Industria</div>
+            <div class="tramite-item" onclick="generarTurno('Licencia de conducir')">Licencia de conducir</div>
+            <div class="tramite-item" onclick="generarTurno('Servicios de Agua')">Servicios de Agua</div>
+            <div class="tramite-item" onclick="generarTurno('Tasas a la Propiedad')">Tasas a la Propiedad</div>
+            <div class="tramite-item" onclick="generarTurno('Tasas del Automotor')">Tasas del Automotor</div>
+            <div class="tramite-item" onclick="generarTurno('Atención Preferencial')">Atención Preferencial</div>
+            <div class="tramite-item" onclick="generarTurno('Otros')">Otros</div>
+        </div>
+    </div>
+
+    <!-- Pantalla 3: Confirmación del Turno (inicialmente oculta) -->
+    <div id="pantalla-confirmacion" style="display: none;" volverInicio()>
+        <h1 id="gracias-visita">¡Gracias por su visita!</h1>
+        <p id="turno-generado">Turno generado con éxito</p>
+        <p id="numero-turno"></p>
+        <p id="municipalidad">Municipalidad de Arroyito</p>
+        <p id="fecha-hora">Fecha y hora: 10/09/2023 15:30</p>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
